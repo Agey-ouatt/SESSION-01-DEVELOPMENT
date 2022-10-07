@@ -89,7 +89,7 @@ options {
 
         stage('SonarQube analysis') {
             agent {
-                agent2 {
+                label 'agent2' {
                   image 'sonarsource/sonar-scanner-cli:4.7.0'
                 }
                }
