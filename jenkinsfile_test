@@ -86,7 +86,7 @@ options {
 
         stage('SonarQube analysis') {
             agent {
-                docker {
+                agent2 {
                   image 'sonarsource/sonar-scanner-cli:4.7.0'
                 }
                }
