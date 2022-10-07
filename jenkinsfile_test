@@ -88,11 +88,11 @@ options {
 
 
         stage('SonarQube analysis') {
-            agent 
-                 {
+            agent {
+                agent2 {
                   image 'sonarsource/sonar-scanner-cli:4.7.0'
                 }
-               
+               }
                environment {
         CI = 'true'
         //  scannerHome = tool 'Sonar'
