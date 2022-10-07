@@ -1,6 +1,6 @@
 
 pipeline {
-agent {agent2}
+agent any
 
 options {
     buildDiscarder(logRotator(numToKeepStr: '20'))
@@ -86,7 +86,7 @@ options {
 
         stage('SonarQube analysis') {
             agent {
-                agent2 {
+                any {
                   image 'sonarsource/sonar-scanner-cli:4.7.0'
                 }
                }
